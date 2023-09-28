@@ -10,6 +10,8 @@ namespace Scarpe_Co_MVC
     {
         public int IdProdotto { get; set; }
         public string Nome { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:C0}")]
         public decimal Prezzo { get; set; }
         public string Descrizione { get; set; }
         public string CoverImg { get; set; }
