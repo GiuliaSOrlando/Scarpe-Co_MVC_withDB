@@ -1,0 +1,64 @@
+﻿@model Scarpe_Co_MVC.Prodotto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Prodotto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdProdotto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdProdotto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prezzo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prezzo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descrizione)
+        </dd>
+
+        <dd>
+            @if (!string.IsNullOrEmpty(Model.CoverImg))
+            {
+                <img src="@Url.Content(Model.CoverImg)" alt="Cover Image" width="600px"/>
+            }
+        </dd>
+
+        <dd>
+            @if (!string.IsNullOrEmpty(Model.Img1))
+            {
+                <img src="@Url.Content(Model.Img1)" alt="Image 1" width="400px" />
+            }
+            @if (!string.IsNullOrEmpty(Model.Img2))
+            {
+                <img src="@Url.Content(Model.Img2)" alt="Image 2" width="400px" />
+            }
+        </dd>
+
+    </dl>
+</div>
